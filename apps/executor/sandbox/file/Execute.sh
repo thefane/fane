@@ -22,9 +22,9 @@ if [$(lang)="c"]; then
     timeout 2s g++ $2
 fi
 
-if [$(lang)="rust"]; then
-    # timeout 2s g++ $2
-fi
+# if [$(lang)="rust"]; then
+#     # timeout 2s g++ $2
+# fi
 
 if [$(lang)="js"]; then
     timeout 2s node $2
