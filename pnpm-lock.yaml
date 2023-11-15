@@ -30,12 +30,21 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0
     devDependencies:
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
+      '@types/node':
+        specifier: ^20.9.0
+        version: 20.9.0
       nodemon:
         specifier: ^3.0.1
         version: 3.0.1
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.1(@types/node@20.9.0)(typescript@4.9.5)
+        version: 10.9.1(@types/node@20.9.0)(typescript@5.2.2)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
 
   apps/landing:
     devDependencies:
@@ -5443,6 +5452,7 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
+
 
   /ts-node@10.9.1(@types/node@20.9.0)(typescript@4.9.5):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}

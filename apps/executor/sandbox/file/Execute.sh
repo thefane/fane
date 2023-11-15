@@ -1,5 +1,5 @@
 #!/bin/bash
-    
+
 og_file = "$1"
 user_code = "$2"
 lang = "$3"
