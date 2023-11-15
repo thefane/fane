@@ -1,6 +1,9 @@
 FROM ubuntu:latest
 
+RUN apt-get update && \
+    apt-get -y install time g++
 
-RUN apt-get update 
-RUN apt -y install time g++ 
+WORKDIR /usr/src
+COPY ./file /usr/src/
+
 
