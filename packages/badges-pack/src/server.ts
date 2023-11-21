@@ -9,6 +9,7 @@ import verificationRouter from './routes/verification.routes';
 
 // DATABASE
 import connectDB from './database/database';
+import adminRouter from './routes/admin.routes';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ server.use(express.json());
 // ROUTES
 
 server.use('/verify',verificationRouter)
+server.use("/admin", adminRouter);
 
 
 let mongoDBUri: (string | undefined) = process.env.DB_URI;

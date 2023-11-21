@@ -1,25 +1,23 @@
 import express,{Express,Request,Response, Router} from "express";
+import { BadgeModel } from "../database/models/badge.model";
 
 const adminRouter:Router = express.Router();
 
-adminRouter.post('/',(req:Request,res:Response)=>{
-    const data = req.body;    
-    const uniquePin = data.uniquePin;
-    
-    try {
-        res.send("Badge exist");
-    } catch (error) {
-        res.send(JSON.stringify({"message":"This is fake"}));
-    }
-});
+
 
 
 adminRouter.post('/add',(req:Request,res:Response)=>{
     const req_data = req.body;
-    const badge_data = req_data.metadata;
+    const badgeData = req_data.metadata;
 
     try {
-        
+          const badge = new BadgeModel({
+            badgeUID: badgeData.badgeUID, // Add the necessary fields based on your schema
+            badgeName: badgeData.badgeName,
+            badgeDescription: badgeData.badgeDescription,
+            badgeIssuer: badgeData.badgeIssuer, // Assuming badgeIssuer is provided
+            badgeCreatedOn: new Date(), // Assuming the badge creation date is set to current date
+          });       
     } catch (error) {
         console.log(error);
     }
