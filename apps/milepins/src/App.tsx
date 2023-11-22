@@ -5,6 +5,7 @@ import Authenticate from "./Authenticate";
 import Landing from "./Landing";
 import Signin from "./Signin";
 import Features from "./Pages/Features";
+import Signup from "./Signup";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/verify" Component={Authenticate} />
             <Route path="/signin" Component={Signin} />
             <Route path="/features" Component={Features} />
+            <Route path="/signup" Component={Signup} />
 
             </Routes>
         </div>

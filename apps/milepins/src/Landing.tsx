@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Landing() {
   return (
@@ -15,9 +16,13 @@ export default function Landing() {
 
       <img src="/public/hexa.svg" alt="hexagon stickers picture" className='w-full h-auto' />
 
-      <div className='flex flex-col items-center'>
-        <button className='decoration-none w-4/5 m-2 bg-black text-white rounded-sm p-2'>Verify a pin</button>
-        <button className='decoration-none w-4/5 m-2 bg-inherit border-2 border-black border-solid rounded-sm p-2'>Know more</button>
+      <div className='flex flex-col items-center text-center'>
+        <Link to="/verify" className='decoration-none w-4/5 m-2 bg-black text-white rounded-sm p-2'>
+          Verify a pin
+        </Link>
+        <Link to="/" className='decoration-none w-4/5 m-2 bg-inherit border-2 border-black border-solid rounded-sm p-2'>
+          Know more
+        </Link>
       </div>
     </>
   );
