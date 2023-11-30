@@ -44,7 +44,7 @@ userRouter.post("/login", async (req: Request, res: Response) => {
       { userId: user._id, email: user.email, organisation: user.organisation },
       process.env.JWT_SECRET_KEY!
     );
-
+   
     res.status(200).json({ token });
   } catch (error) {
     console.log(error);

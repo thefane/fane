@@ -1,6 +1,6 @@
 import express,{Express,Request,Response,Application, json} from 'express';
 import dotenv from 'dotenv';
-
+import cors from 'cors';
 
 // ROUTES
 
@@ -19,7 +19,7 @@ const server:Application = express();
 const PORT = process.env.PORT || 8001;
 
 server.use(express.json());
-
+server.use(cors())
 // ROUTES
 
 server.use('/verify',verificationRouter)

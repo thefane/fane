@@ -14,11 +14,9 @@ verificationRouter.post("/", async (req: Request, res: Response) => {
    } else {
      res.status(404).json({ message: "Issuance not found" });
    }
-
   } catch (error) {
     res.send(JSON.stringify({ message: "This is fake" }));
   }
 });
 
 export default verificationRouter;
-
